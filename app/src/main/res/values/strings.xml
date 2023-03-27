@@ -90,6 +90,7 @@
     <string name="others">Others</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="enter_your_name">Enter your name</string>
 
     <string-array name="Topics">
         <item>Select Topic</item>

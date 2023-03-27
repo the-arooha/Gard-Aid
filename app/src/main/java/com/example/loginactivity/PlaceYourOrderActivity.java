@@ -24,7 +24,7 @@ import com.example.loginactivity.Model.StoreModel;
 
 
 public class PlaceYourOrderActivity extends AppCompatActivity {
-    private EditText inputName, inputAddress, inputCity, inputState, inputZip,inputCardNumber, inputCardExpiry, inputCardPin ;
+    private EditText inputName, inputAddress, inputCity, inputState, inputZip ;
     private RecyclerView cartItemsRecyclerView;
     private TextView tvSubtotalAmount, tvDeliveryChargeAmount, tvDeliveryCharge, tvTotalAmount, buttonPlaceYourOrder;
     private SwitchCompat switchDelivery;
@@ -47,9 +47,6 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
         inputCity = findViewById(R.id.inputCity);
         inputState = findViewById(R.id.inputState);
         inputZip = findViewById(R.id.inputZip);
-        inputCardNumber = findViewById(R.id.inputCardNumber);
-        inputCardExpiry = findViewById(R.id.inputCardExpiry);
-        inputCardPin = findViewById(R.id.inputCardPin);
         tvSubtotalAmount = findViewById(R.id.tvSubtotalAmount);
         tvDeliveryChargeAmount = findViewById(R.id.tvDeliveryChargeAmount);
         tvDeliveryCharge = findViewById(R.id.tvDeliveryCharge);
@@ -121,15 +118,6 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
             return;
         }else if(isDeliveryOn && TextUtils.isEmpty(inputState.getText().toString())) {
             inputState.setError("Please enter zip ");
-            return;
-        }else if( TextUtils.isEmpty(inputCardNumber.getText().toString())) {
-            inputCardNumber.setError("Please enter card number ");
-            return;
-        }else if( TextUtils.isEmpty(inputCardExpiry.getText().toString())) {
-            inputCardExpiry.setError("Please enter card expiry ");
-            return;
-        }else if( TextUtils.isEmpty(inputCardPin.getText().toString())) {
-            inputCardPin.setError("Please enter card pin/cvv ");
             return;
         }
         //start success activity..

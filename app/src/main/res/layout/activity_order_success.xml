@@ -26,6 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="Done"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         android:gravity="center"

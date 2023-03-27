@@ -22,14 +22,18 @@
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <TextView android:id="@+id/tvPickup"
+        <TextView
+            android:id="@+id/tvPickup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toStartOf="@+id/switchDelivery"
-            app:layout_constraintTop_toBottomOf="@+id/tvCustomerDetails"
+            android:layout_marginTop="12dp"
             android:text="Pickup"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/switchDelivery"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerDetails" />
 
         <androidx.appcompat.widget.SwitchCompat android:id="@+id/switchDelivery"
             android:layout_width="wrap_content"
@@ -41,14 +45,18 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"/>
 
-        <TextView android:id="@+id/tvDelivery"
+        <TextView
+            android:id="@+id/tvDelivery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/switchDelivery"
-            app:layout_constraintTop_toBottomOf="@+id/tvCustomerDetails"
+            android:layout_marginTop="12dp"
             android:text="Delivery"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintStart_toEndOf="@+id/switchDelivery"
+            app:layout_constraintTop_toBottomOf="@+id/tvCustomerDetails" />
 
         <EditText android:id="@+id/inputName"
             android:layout_width="match_parent"
@@ -60,7 +68,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginTop="05dp"
             android:layout_marginBottom="05dp"
-            android:hint="Enter your name"/>
+            android:hint="@string/enter_your_name"/>
 
         <EditText android:id="@+id/inputAddress"
             android:layout_width="match_parent"
@@ -123,58 +131,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputZip"
             android:layout_margin="10dp"
-            android:text="Card Details"
+            android:text="Cash to be collected on Delivery"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <EditText android:id="@+id/inputCardNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvCardDetails"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="05dp"
-            android:layout_marginBottom="05dp"
-            android:hint="Enter Card Number"
-            android:inputType="number"
-            android:maxLength="16"/>
-
-        <EditText android:id="@+id/inputCardExpiry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/inputCardNumber"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="05dp"
-            android:layout_marginBottom="05dp"
-            android:hint="Enter Card expiry(mm/yyyy)"
-            android:inputType="number"
-            android:maxLength="6"/>
-
-        <EditText android:id="@+id/inputCardPin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/inputCardExpiry"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="05dp"
-            android:layout_marginBottom="05dp"
-            android:hint="Enter Card pin(3 digits)"
-            android:inputType="number"
-            android:maxLength="3"/>
 
         <TextView android:id="@+id/tvTotalItems"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputCardPin"
+            app:layout_constraintTop_toBottomOf="@+id/tvCardDetails"
             android:layout_margin="10dp"
             android:text="Total items in cart"
             android:textSize="18sp"
