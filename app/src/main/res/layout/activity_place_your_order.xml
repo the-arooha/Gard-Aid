@@ -58,17 +58,17 @@
             app:layout_constraintStart_toEndOf="@+id/switchDelivery"
             app:layout_constraintTop_toBottomOf="@+id/tvCustomerDetails" />
 
-        <EditText android:id="@+id/inputName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/switchDelivery"
+        <EditText
+            android:id="@+id/inputName"
+            android:layout_width="398dp"
+            android:layout_height="53dp"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="05dp"
-            android:layout_marginBottom="05dp"
-            android:hint="@string/enter_your_name"/>
+            android:layout_marginEnd="10dp"
+            android:hint="Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switchDelivery" />
 
         <EditText android:id="@+id/inputAddress"
             android:layout_width="match_parent"
@@ -124,17 +124,19 @@
             android:maxLength="5"
             android:visibility="gone"/>
 
-        <TextView android:id="@+id/tvCardDetails"
+
+        <TextView
+            android:id="@+id/tvCardDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputZip"
             android:layout_margin="10dp"
+            android:layout_marginTop="16dp"
             android:text="Cash to be collected on Delivery"
             android:textSize="18sp"
-            android:textStyle="bold"/>
-
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputZip" />
 
         <TextView android:id="@+id/tvTotalItems"
             android:layout_width="wrap_content"
@@ -223,6 +225,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTotal"
             android:text="Place your order"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             android:gravity="center"
