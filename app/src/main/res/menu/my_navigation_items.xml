@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_account_circle"
+            android:title="Profile"
+            tools:ignore="HardcodedText" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="@string/interests">
+            <menu>
+                <item
+                    android:id="@+id/nav_science"
+                    android:icon="@drawable/ic_baseline_science_24"
+                    android:title="@string/science1"/>
+
+                <item
+                    android:id="@+id/nav_arts"
+                    android:icon="@drawable/ic_history"
+                    android:title="@string/arts"
+                    tools:ignore="HardcodedText" />
+
+                <item
+                    android:id="@+id/nav_commerce"
+                    android:icon="@drawable/ic_commerce"
+                    android:title="@string/commerce"
+                    tools:ignore="HardcodedText" />
+
+                <item
+                    android:id="@+id/nav_technology"
+                    android:icon="@drawable/ic_biology"
+                    android:title="@string/technology"
+                    tools:ignore="HardcodedText" />
+
+                <item
+                    android:id="@+id/nav_physicaleducation"
+                    android:icon="@drawable/ic_baseline_sports_martial_arts_24"
+                    android:title="@string/physical_education"
+                    tools:ignore="HardcodedText" />
+            </menu>
+        </item>
+    </group>
+
+        <item android:title="@string/others">
+        <menu>
+        <item
+            android:id="@+id/nav_currentaffairs"
+            android:icon="@drawable/ic_baseline_newspaper_24"
+            android:title="@string/current_affairs1"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_tests"
+            android:icon="@drawable/ic_baseline_edit_attributes_24"
+            android:title="@string/tests1" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="@string/share1"/>
+
+        </menu>
+        </item>
+
+</menu>
+

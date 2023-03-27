@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "268729098364",
+    "project_id": "edura-c8e83",
+    "storage_bucket": "edura-c8e83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268729098364:android:b2c6063cf335283bf529f9",
+        "android_client_info": {
+          "package_name": "com.example.loginactivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268729098364-0j44js13e29cqetajdldgt3o2o6m4tb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfcFVGzttBvr6H8A52WnHMF4sQ9vJuybY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268729098364-0j44js13e29cqetajdldgt3o2o6m4tb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

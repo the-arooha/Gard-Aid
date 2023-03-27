@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingClass">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilepic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="16sp"
+        android:src="@drawable/logo1" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profilepic"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="10dp"
+        android:text="GARD- AID"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sprout Smart"
+        android:layout_below="@+id/name"
+        android:textColor="@color/lightgrey"
+        android:textSize="12sp"
+        android:layout_marginStart="16sp"/>
+    <View
+        android:layout_below="@+id/username"
+        android:layout_width="match_parent"
+        style="@style/line"/>
+
+</RelativeLayout>
