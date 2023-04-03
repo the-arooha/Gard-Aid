@@ -31,11 +31,21 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivHerb"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/herb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivHerb"
+                    android:text="Herb Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -52,11 +62,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivVegetable"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/vegetable2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivVegetable"
+                    android:text="Vegetable Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -73,11 +94,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivMeditation"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/meditation1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivMeditation"
+                    android:text="Meditation Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -94,11 +126,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivHerbtea"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/herbaltea" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivHerbtea"
+                    android:text="Herbal Tea Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -115,11 +158,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivFoliage"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/foliage" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivFoliage"
+                    android:text="Foliage Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -136,11 +190,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivSeasonal"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/seasonalflower" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivSeasonal"
+                    android:text="Seasonal Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -157,11 +222,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivBee"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/bee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivBee"
+                    android:text="Bee Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -178,11 +254,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivClimbers"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/climbers" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivClimbers"
+                    android:text="Climbers Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -199,11 +286,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivRock"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/rock" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:src="@drawable/rock1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivRock"
+                    android:text="Rock Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -218,12 +316,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivWater"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/water" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:src="@drawable/waterlily" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivWater"
+                    android:text="Water Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -238,12 +348,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivAnnual"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/annual" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivAnnual"
+                    android:text="Annual Plants"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -260,11 +382,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivPerennials"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/perennials" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivPerennials"
+                    android:text="Perennial Plants"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -281,11 +414,21 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivButterfly"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/butterfly" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivButterfly"
+                    android:text="Butterfly Garden"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -302,11 +445,22 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_alignParentStart="true"
                     android:id="@+id/ivSucculents"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
                     android:src="@drawable/succulents" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivSucculents"
+                    android:text="Succulents"
+                    android:textStyle="italic"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerInParent="true"/>
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 

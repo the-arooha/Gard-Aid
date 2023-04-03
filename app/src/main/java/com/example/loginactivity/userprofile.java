@@ -12,6 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.example.loginactivity.Model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -25,10 +27,10 @@ import com.google.firebase.database.ValueEventListener;
 
 public class userprofile extends AppCompatActivity {
 
-    private TextView textViewFullName,textViewusername,textViewemailid,textViewgender,textViewstatus,textViewpassword,textViewdob,textViewqualification,textViewstate;
+    private TextView textViewFullName,textViewusername,textViewemailid,textViewgender,textViewstatus,textViewdob,textViewqualification,textViewstate;
     private ProgressBar progressBar;
     private ProgressDialog progressDialog;
-    private String fullName,email,gender,status,dob,qualification,state,username,password;
+    private String fullName,email,gender,status,dob,qualification,state,username;
     private ImageView imageview;
     private FirebaseAuth authProfile;
 
@@ -38,7 +40,6 @@ public class userprofile extends AppCompatActivity {
         setContentView(R.layout.activity_userprofile);
 
         textViewFullName= findViewById(R.id.textView3);
-        textViewpassword=findViewById(R.id.passwordtext);
         textViewusername=findViewById(R.id.username);
         textViewemailid=findViewById(R.id.textView4);
         textViewgender= findViewById(R.id.gendertext);
@@ -48,6 +49,8 @@ public class userprofile extends AppCompatActivity {
         textViewstate= findViewById(R.id.statetext);
         imageview=findViewById(R.id.imageView2);
         progressBar=findViewById(R.id.progressBar);
+
+        getImage();
 
         authProfile= FirebaseAuth.getInstance();
         FirebaseUser firebaseUser= authProfile.getCurrentUser();
@@ -78,9 +81,7 @@ public class userprofile extends AppCompatActivity {
                     dob=readUserDetails.DOB;
                     qualification=readUserDetails.Qualification;
                     state=readUserDetails.State;
-                    password=readUserDetails.Password;
 
-                    textViewpassword.setText(password);
                     textViewFullName.setText(fullName);
                     textViewusername.setText(username);
                     textViewemailid.setText(email);
@@ -102,7 +103,6 @@ public class userprofile extends AppCompatActivity {
             }
         });
     }
-
 
     public void delete(View view){
         progressDialog=new ProgressDialog(this);
@@ -135,10 +135,33 @@ public class userprofile extends AppCompatActivity {
                     }
                 });
     }
+
+    private void getImage(){
+        DatabaseReference reference=FirebaseDatabase.getInstance().getReference("users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                User user=snapshot.getValue(User.class);
+//                Glide.with(CommentsActivity.this).load(user.getProfileimageurl()).into(circleImageView);
+                com.example.loginactivity.Model.User user=snapshot.getValue(User.class);
+                Glide.with(userprofile.this).load(user.getProfileimageurl()).into(imageview);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(userprofile.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
     //logout from the application
     public void logout(View view){
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(),Login.class));
         finish();
+    }
+
+    public  void home(View view){
+        Intent intent=new Intent(userprofile.this,MainActivity.class);
+        startActivity(intent);
     }
 }
