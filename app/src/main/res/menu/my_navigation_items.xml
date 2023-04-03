@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_feed"
             android:icon="@drawable/ic_baseline_home_24"
             android:title="Feed"
             tools:ignore="HardcodedText" />
@@ -20,7 +20,7 @@
                     tools:ignore="HardcodedText" />
                 <item
                     android:id="@+id/nav_vegetable"
-                    android:icon="@drawable/herb"
+                    android:icon="@drawable/herbs"
                     android:title="Vegetable Garden"/>
 
                 <item
@@ -37,7 +37,7 @@
 
                 <item
                     android:id="@+id/nav_foliage"
-                    android:icon="@drawable/foliage"
+                    android:icon="@drawable/ic_baseline_interests_24"
                     android:title="Foliage Garden"
                     tools:ignore="HardcodedText" />
 

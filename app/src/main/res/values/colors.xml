@@ -19,4 +19,14 @@
     <color name="light_grey">#e4e4e4</color>
     <color name="grey">#8b8b8b</color>
     <color name="dark_grey">#696969</color>
+
+
+    <color name="textColor">#273d52</color>
+    <color name="headerColor">#145795</color>
+
+
+    <color name="startColor">#006797</color>
+    <color name="endColor">#489855</color>
+    <color name="centerColor">#006797</color>
+    <color name="userRow">#403fc68b</color>
 </resources>

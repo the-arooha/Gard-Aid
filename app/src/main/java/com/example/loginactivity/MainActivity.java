@@ -1,30 +1,35 @@
 package com.example.loginactivity;
 
 import static com.example.loginactivity.R.id.drawer_layout;
-import static com.example.loginactivity.R.id.nav_arts;
-import static com.example.loginactivity.R.id.nav_commerce;
-import static com.example.loginactivity.R.id.nav_currentaffairs;
-import static com.example.loginactivity.R.id.nav_physicaleducation;
+import static com.example.loginactivity.R.id.nav_basics;
+import static com.example.loginactivity.R.id.nav_cart;
+import static com.example.loginactivity.R.id.nav_environmental;
+import static com.example.loginactivity.R.id.nav_feed;
+import static com.example.loginactivity.R.id.nav_foliage;
+import static com.example.loginactivity.R.id.nav_herb;
+import static com.example.loginactivity.R.id.nav_ingredients;
+import static com.example.loginactivity.R.id.nav_manures;
+import static com.example.loginactivity.R.id.nav_meditation;
+import static com.example.loginactivity.R.id.nav_morecat;
+import static com.example.loginactivity.R.id.nav_pests;
+import static com.example.loginactivity.R.id.nav_plant;
 import static com.example.loginactivity.R.id.nav_profile;
-import static com.example.loginactivity.R.id.nav_science;
 import static com.example.loginactivity.R.id.nav_share;
-import static com.example.loginactivity.R.id.nav_technology;
-import static com.example.loginactivity.R.id.nav_tests;
+import static com.example.loginactivity.R.id.nav_tea;
+import static com.example.loginactivity.R.id.nav_vegetable;
+import static com.example.loginactivity.R.id.nav_vermi;
 import static com.example.loginactivity.R.id.navigation_view;
 import static com.example.loginactivity.R.id.question_text;
 import static com.example.loginactivity.R.id.topAppbar;
 import static com.example.loginactivity.R.layout;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -36,7 +41,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.loginactivity.Adapters.PostAdapter;
 import com.example.loginactivity.Model.Post;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.example.loginactivity.categories.MainActivity4;
+import com.example.loginactivity.categories.foliage.FoliageActivity;
+import com.example.loginactivity.categories.herb.HerbActivity;
+import com.example.loginactivity.categories.herbaltea.HerbalteaActivity;
+import com.example.loginactivity.categories.meditation.MeditationActivity;
+import com.example.loginactivity.categories.vegetable.VegetableActivity;
+import com.example.loginactivity.compost.basics.BasicsActivity;
+import com.example.loginactivity.compost.ingredients.IngredientsActivity;
+import com.example.loginactivity.compost.manures.ManuresActivity;
+import com.example.loginactivity.compost.verm.VermActivity;
+import com.example.loginactivity.problems.environmental.EnvironmentalActivity;
+import com.example.loginactivity.problems.pests.PestsActivity;
+import com.example.loginactivity.problems.plantdisease.PlantdiseasesActivity;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -102,45 +119,80 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             drawerLayout.closeDrawer(GravityCompat.START);
             switch (id)
             {
-                case nav_profile:
-                    Intent intent=new Intent(MainActivity.this,userprofile.class);
-                    startActivity(intent);
-                    break;
-                case nav_science:
-                    Intent intent1=new Intent(MainActivity.this,CategorySelectedActivity.class);
-                    intent1.putExtra("title","Science");
+                case nav_feed:
+                    Intent intent1=new Intent(MainActivity.this,MainActivity.class);
                     startActivity(intent1);
                     break;
-                case nav_arts:
-                    Intent intent2=new Intent(MainActivity.this,CategorySelectedActivity.class);
-                    intent2.putExtra("title","Arts");
+            //categories
+                case nav_herb:
+                    Intent intent2=new Intent(MainActivity.this, HerbActivity.class);
                     startActivity(intent2);
                     break;
-                case nav_commerce:
-                    Intent intent3=new Intent(MainActivity.this,CategorySelectedActivity.class);
-                    intent3.putExtra("title","Commerce");
+                case nav_vegetable:
+                    Intent intent3=new Intent(MainActivity.this, VegetableActivity.class);
                     startActivity(intent3);
                     break;
-                case nav_technology:
-                    Intent intent4=new Intent(MainActivity.this,CategorySelectedActivity.class);
-                    intent4.putExtra("title","Technology");
+                case nav_meditation:
+                    Intent intent4=new Intent(MainActivity.this, MeditationActivity.class);
                     startActivity(intent4);
                     break;
-                case nav_physicaleducation:
-                    Intent intent5=new Intent(MainActivity.this,CategorySelectedActivity.class);
-                    intent5.putExtra("title","Physical Education");
+                case nav_tea:
+                    Intent intent5=new Intent(MainActivity.this, HerbalteaActivity.class);
                     startActivity(intent5);
                     break;
-                case nav_currentaffairs:
-                    Toast.makeText(MainActivity.this, "Current Affairs", Toast.LENGTH_SHORT).show();break;
-                case nav_tests:
-                    Toast.makeText(MainActivity.this, "Tests", Toast.LENGTH_SHORT).show();break;
+                case nav_foliage:
+                    Intent intent6=new Intent(MainActivity.this, FoliageActivity.class);
+                    startActivity(intent6);
+                    break;
+                case nav_morecat:
+                    Intent intent7=new Intent(MainActivity.this, MainActivity4.class);
+                    startActivity(intent7);
+                    break;
+                //problems
+                case nav_plant:
+                    Intent intent8=new Intent(MainActivity.this, PlantdiseasesActivity.class);
+                    startActivity(intent8);
+                    break;
+                case nav_environmental:
+                    Intent intent9=new Intent(MainActivity.this, EnvironmentalActivity.class);
+                    startActivity(intent9);
+                    break;
+                case nav_pests:
+                    Intent intent10=new Intent(MainActivity.this, PestsActivity.class);
+                    startActivity(intent10);
+                    break;
+                //composting
+                case nav_basics:
+                    Intent intent11=new Intent(MainActivity.this, BasicsActivity.class);
+                    startActivity(intent11);
+                    break;
+                case nav_ingredients:
+                    Intent intent12=new Intent(MainActivity.this, IngredientsActivity.class);
+                    startActivity(intent12);
+                    break;
+                case nav_manures:
+                    Intent intent13=new Intent(MainActivity.this, ManuresActivity.class);
+                    startActivity(intent13);
+                    break;
+                case nav_vermi:
+                    Intent intent14=new Intent(MainActivity.this, VermActivity.class);
+                    startActivity(intent14);
+                    break;
+                //others
+                case nav_profile:
+                    Intent intent15=new Intent(MainActivity.this,userprofile.class);
+                    startActivity(intent15);
+                    break;
+                case nav_cart:
+                    Intent intent16=new Intent(MainActivity.this,SplashActivity.class);
+                    startActivity(intent16);
+                    break;
                 case nav_share:
-                    Intent intent6=new Intent(Intent.ACTION_SEND);
-                    intent6.setType("text/plain");
-                    intent6.putExtra(Intent.EXTRA_SUBJECT,"Check out this community based educational query application");
-                    intent6.putExtra(Intent.EXTRA_TEXT,"Your Application Link");
-                    startActivity(Intent.createChooser(intent6,"Share via"));
+                    Intent intent17=new Intent(Intent.ACTION_SEND);
+                    intent17.setType("text/plain");
+                    intent17.putExtra(Intent.EXTRA_SUBJECT,"Check out this community based educational query application");
+                    intent17.putExtra(Intent.EXTRA_TEXT,"Your Application Link");
+                    startActivity(Intent.createChooser(intent17,"Share via"));
                     return super.onOptionsItemSelected(item);
 
                 default:

@@ -42,7 +42,7 @@ public class StoreListAdapter extends RecyclerView.Adapter<StoreListAdapter.MyVi
     public void onBindViewHolder(@NonNull StoreListAdapter.MyViewHolder holder, int position) {
         holder.storeName.setText(storeModelList.get(position).getName());
         holder.storeAddress.setText("Address:"+storeModelList.get(position).getAddress());
-        holder.storeHours.setText("Today's hours:"+storeModelList.get(position).getHours().getTodayHours());
+        holder.storeHours.setText("Timings:"+storeModelList.get(position).getHours().getTodayHours());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

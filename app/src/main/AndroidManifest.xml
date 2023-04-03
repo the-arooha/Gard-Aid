@@ -15,6 +15,148 @@
         android:theme="@style/Theme.LoginActivity"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity3"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".compost.verm.WormindoorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".compost.manures.ChickenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".compost.ingredients.YardwasteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".compost.basics.LandfillsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".compost.verm.VermActivity"
+            android:exported="false" />
+        <activity
+            android:name=".compost.manures.ManuresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".compost.ingredients.IngredientsActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".compost.basics.BasicsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".problems.pests.BirdssunActivity"
+            android:exported="false" />
+        <activity
+            android:name=".problems.plantdisease.TuberrotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".problems.environmental.ExfcoldActivity"
+            android:exported="false" />
+        <activity
+            android:name=".problems.pests.PestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".problems.environmental.EnvironmentalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".problems.plantdisease.PlantdiseasesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".categories.rock.Rock1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.butterfly.Butterfly1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.bee.Bee1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.butterfly.ButterflyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.rock.RockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.bee.BeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.succulents.AgaveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.succulents.SucculentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.perennial.RoseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.perennial.PerennialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.annual.ZinniasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.annual.AnnualActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.water.WaterlilyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.climbers.PeasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.water.WaterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".categories.climbers.ClimbersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".categories.seasonal.TulipActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.seasonal.SeasonalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.foliage.ColeusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.foliage.FoliageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.herbaltea.MintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.herbaltea.HerbalteaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.meditation.MilkweedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.meditation.MeditationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.vegetable.BroccoliActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.herb.ParsleyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.vegetable.VegetableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.herb.HerbActivity"
+            android:exported="false" />
+        <activity
+            android:name=".categories.MainActivity4"
+            android:exported="true" />
+        <activity
+            android:name=".SelectedUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrderSuccessActivity"
             android:exported="false" />
         <activity
@@ -28,13 +170,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".CommentsActivity"
             android:exported="false">
@@ -66,6 +202,12 @@
         <activity
             android:name=".Login"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

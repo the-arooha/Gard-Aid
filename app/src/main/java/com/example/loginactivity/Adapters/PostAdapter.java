@@ -155,7 +155,6 @@ public class PostAdapter extends  RecyclerView.Adapter<PostAdapter.ViewHolder> {
             likes=itemView.findViewById(R.id.likes);
             dislikes=itemView.findViewById(R.id.dislikes);
             comments=itemView.findViewById(R.id.comments);
-            more=itemView.findViewById(R.id.more);
             questionImage=itemView.findViewById(R.id.questionImage);
             like=itemView.findViewById(R.id.like);
             dislike=itemView.findViewById(R.id.dislike);

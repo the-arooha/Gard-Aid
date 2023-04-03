@@ -12,11 +12,16 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">#FFFFFF</item>
         <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/white</item>
     </style>
     <style name="line">
 
         <item name="android:background">@color/lightgrey</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="toolbar">
+        <item name="android:editTextColor">@color/white</item>
     </style>
 </resources>
