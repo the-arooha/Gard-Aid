@@ -20,16 +20,20 @@ import android.widget.TextView;
 
 import com.example.loginactivity.Adapters.PlaceYourOrderAdapter;
 import com.example.loginactivity.Model.Menu;
+import com.example.loginactivity.Model.Order;
 import com.example.loginactivity.Model.StoreModel;
-
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class PlaceYourOrderActivity extends AppCompatActivity {
-    private EditText inputName, inputAddress, inputCity, inputState, inputZip ;
+    private EditText inputName, inputAddress, inputCity, inputState, inputZip;
     private RecyclerView cartItemsRecyclerView;
     private TextView tvSubtotalAmount, tvDeliveryChargeAmount, tvDeliveryCharge, tvTotalAmount, buttonPlaceYourOrder;
     private SwitchCompat switchDelivery;
     private boolean isDeliveryOn;
     private PlaceYourOrderAdapter placeYourOrderAdapter;
+
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +41,6 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_place_your_order);
 
         StoreModel storeModel = getIntent().getParcelableExtra("RestaurantModel");
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle(restaurantModel.getName());
-        //actionBar.setSubtitle(restaurantModel.getAddress());
-        //actionBar.setDisplayHomeAsUpEnabled(true);
 
         inputName = findViewById(R.id.inputName);
         inputAddress = findViewById(R.id.inputAddress);
@@ -55,6 +55,7 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
         switchDelivery = findViewById(R.id.switchDelivery);
 
         cartItemsRecyclerView = findViewById(R.id.cartItemsRecyclerView);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         buttonPlaceYourOrder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +67,7 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
         switchDelivery.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) {
+                if (isChecked) {
                     inputAddress.setVisibility(View.VISIBLE);
                     inputCity.setVisibility(View.VISIBLE);
                     inputState.setVisibility(View.VISIBLE);
@@ -94,35 +95,57 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
     private void calculateTotalAmount(StoreModel storeModel) {
         float subTotalAmount = 0f;
 
-        for(Menu m : storeModel.getMenus()) {
+        for (Menu m : storeModel.getMenus()) {
             subTotalAmount += m.getPrice() * m.getTotalInCart();
         }
 
-        tvSubtotalAmount.setText("$"+String.format("%.2f", subTotalAmount));
-        if(isDeliveryOn) {
-            tvDeliveryChargeAmount.setText("$"+String.format("%.2f", storeModel.getDelivery_charge()));
+        tvSubtotalAmount.setText("Rs." + String.format("%.2f", subTotalAmount));
+        if (isDeliveryOn) {
+            tvDeliveryChargeAmount.setText("Rs." + String.format("%.2f", storeModel.getDelivery_charge()));
             subTotalAmount += storeModel.getDelivery_charge();
         }
-        tvTotalAmount.setText("$"+String.format("%.2f", subTotalAmount));
+        tvTotalAmount.setText("Rs." + String.format("%.2f", subTotalAmount));
     }
 
     private void onPlaceOrderButtonClick(StoreModel storeModel) {
-        if(TextUtils.isEmpty(inputName.getText().toString())) {
+        if (TextUtils.isEmpty(inputName.getText().toString())) {
             inputName.setError("Please enter name ");
             return;
-        } else if(isDeliveryOn && TextUtils.isEmpty(inputAddress.getText().toString())) {
+        } else if (isDeliveryOn && TextUtils.isEmpty(inputAddress.getText().toString())) {
             inputAddress.setError("Please enter address ");
             return;
-        }else if(isDeliveryOn && TextUtils.isEmpty(inputCity.getText().toString())) {
+        } else if (isDeliveryOn && TextUtils.isEmpty(inputCity.getText().toString())) {
             inputCity.setError("Please enter city ");
             return;
-        }else if(isDeliveryOn && TextUtils.isEmpty(inputState.getText().toString())) {
+        } else if (isDeliveryOn && TextUtils.isEmpty(inputState.getText().toString())) {
             inputState.setError("Please enter zip ");
             return;
         }
-        //start success activity..
+
+        // Store the data into Firebase Realtime Database
+        DatabaseReference ordersRef = FirebaseDatabase.getInstance().getReference("orders");
+        String orderId = ordersRef.push().getKey();
+
+        Order order = new Order(
+                orderId,
+                inputName.getText().toString(),
+                inputAddress.getText().toString(),
+                inputCity.getText().toString(),
+                inputState.getText().toString(),
+                inputZip.getText().toString(),
+                tvSubtotalAmount.getText().toString(),
+                tvDeliveryChargeAmount.getText().toString(),
+                tvTotalAmount.getText().toString(),
+                storeModel.getMenus(),
+                isDeliveryOn,
+                storeModel.getDelivery_charge()
+        );
+
+        ordersRef.child(orderId).setValue(order);
+
+        // Start success activity
         Intent i = new Intent(PlaceYourOrderActivity.this, OrderSuccessActivity.class);
-        i.putExtra("StoreModel",storeModel);
+        i.putExtra("StoreModel", storeModel);
         startActivityForResult(i, 1000);
     }
 
@@ -135,7 +158,7 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        if(requestCode == 1000) {
+        if (requestCode == 1000) {
             setResult(Activity.RESULT_OK);
             finish();
         }
@@ -146,7 +169,7 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
-            case android.R.id.home :
+            case android.R.id.home:
                 finish();
             default:
                 //do nothing

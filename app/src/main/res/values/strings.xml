@@ -167,7 +167,7 @@ By following these steps, you can enjoy a beautiful and colorful display of Cole
     </string>
 
 
-        <string name="milkweed">How to Plant, Grow, and Care for Milkweed</string>
+    <string name="milkweed">How to Plant, Grow, and Care for Milkweed</string>
     <string name="description_milkweed">Milkweed is a critical plant for the survival of monarch butterflies, as it is the sole food source for monarch caterpillars. Here are some steps to plant, grow, and care for milkweed:\n\n
 <br><b>1. Choose a suitable location:</b> Milkweed prefers full sun but can tolerate some shade. It also requires well-draining soil.\n\n</br>
 <br><b>2. Plant the Milkweed:</b> Plant milkweed seeds or seedlings in the spring or fall. Seeds should be planted about 1/4 inch deep and 12 to 24 inches apart. Seedlings should be planted at the same depth as they were in their container, and spaced 12 to 24 inches apart.\n\n</br>
@@ -346,8 +346,8 @@ By following these steps, you can grow healthy and beautiful rose bushes that wi
 
     <string-array name="Topics">
         <item>Select Topic</item>
-        <item>Garden Categories</item>
-        <item>Compost</item>
+        <item>Categories</item>
+        <item>Composting</item>
         <item>Problems</item>
     </string-array>
 </resources>

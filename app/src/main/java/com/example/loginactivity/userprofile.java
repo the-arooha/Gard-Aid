@@ -164,4 +164,9 @@ public class userprofile extends AppCompatActivity {
         Intent intent=new Intent(userprofile.this,MainActivity.class);
         startActivity(intent);
     }
+
+    public void settings(View view) {
+        Intent intent=new Intent(userprofile.this,ProfileupdateActivity.class);
+        startActivity(intent);
+    }
 }

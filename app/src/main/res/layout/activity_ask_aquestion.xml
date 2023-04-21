@@ -43,7 +43,7 @@
         android:textSize="18sp" />
 
     <ImageView
-        android:id="@+id/questionImage"
+        android:id="@+id/question_Image"
         android:layout_margin="10dp"
         android:layout_gravity="center"
         android:layout_width="200dp"
@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_margin="10dp"
+            android:onClick="Cancel"
             android:layout_weight="1"
             android:textColor="@color/blue"
             android:backgroundTint="@color/light_grey"/>
@@ -73,6 +74,7 @@
             android:textAllCaps="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="Post"
             android:text="Post"
             android:layout_weight="1"
             android:textColor="@color/blue"

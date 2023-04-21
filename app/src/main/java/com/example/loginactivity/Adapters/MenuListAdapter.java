@@ -41,11 +41,11 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MenuListAdapter.MyViewHolder holder, int position) {
         holder.menuName.setText(menuList.get(position).getName());
-        holder.menuPrice.setText("Price: $"+menuList.get(position).getPrice());
+        holder.menuPrice.setText("Rs."+menuList.get(position).getPrice());
         holder.addToCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Menu menu  = menuList.get(position);
+                Menu menu  = menuList.get(holder.getAdapterPosition());
                 menu.setTotalInCart(1);
                 clickListener.onAddToCartClick(menu);
                 holder.addMoreLayout.setVisibility(View.VISIBLE);
@@ -56,7 +56,7 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MyView
         holder.imageMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Menu menu  = menuList.get(position);
+                Menu menu  = menuList.get(holder.getAdapterPosition());
                 int total = menu.getTotalInCart();
                 total--;
                 if(total > 0 ) {
@@ -75,7 +75,7 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MyView
         holder.imageAddOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Menu menu  = menuList.get(position);
+                Menu menu  = menuList.get(holder.getAdapterPosition());
                 int total = menu.getTotalInCart();
                 total++;
                 if(total <= 10 ) {
@@ -87,7 +87,7 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.MyView
         });
 
         Glide.with(holder.thumbImage)
-                .load(menuList.get(position).getUrl())
+                .load(menuList.get(holder.getAdapterPosition()).getUrl())
                 .into(holder.thumbImage);
 
     }

@@ -15,10 +15,13 @@
         android:theme="@style/Theme.LoginActivity"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity3"
+            android:name=".ProfileupdateActivity"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".MainActivity3"
+            android:exported="true"></activity>
         <activity
             android:name=".compost.verm.WormindoorActivity"
             android:exported="false" />
@@ -39,9 +42,7 @@
             android:exported="false" />
         <activity
             android:name=".compost.ingredients.IngredientsActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".compost.basics.BasicsActivity"
             android:exported="false" />
@@ -63,7 +64,6 @@
         <activity
             android:name=".problems.plantdisease.PlantdiseasesActivity"
             android:exported="false" />
-
         <activity
             android:name=".categories.rock.Rock1Activity"
             android:exported="false" />
@@ -109,11 +109,9 @@
         <activity
             android:name=".categories.water.WaterActivity"
             android:exported="false" />
-
         <activity
             android:name=".categories.climbers.ClimbersActivity"
             android:exported="false" />
-
         <activity
             android:name=".categories.seasonal.TulipActivity"
             android:exported="false" />
@@ -202,6 +200,11 @@
         <activity
             android:name=".Login"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

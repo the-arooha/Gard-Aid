@@ -36,7 +36,7 @@
                     android:id="@+id/ivHerb"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/herb" />
+                    android:src="@drawable/herbhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
                     android:id="@+id/ivVegetable"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/vegetable2" />
+                    android:src="@drawable/vegetable" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                     android:id="@+id/ivMeditation"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/meditation1" />
+                    android:src="@drawable/meditationhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -131,7 +131,7 @@
                     android:id="@+id/ivHerbtea"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/herbaltea" />
+                    android:src="@drawable/herbalteahd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
                     android:id="@+id/ivFoliage"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/foliage" />
+                    android:src="@drawable/foliagehd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -195,7 +195,7 @@
                     android:id="@+id/ivSeasonal"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/seasonalflower" />
+                    android:src="@drawable/seasonalhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -227,7 +227,7 @@
                     android:id="@+id/ivBee"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/bee" />
+                    android:src="@drawable/beehd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -259,7 +259,7 @@
                     android:id="@+id/ivClimbers"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/climbers" />
+                    android:src="@drawable/climbershd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -291,7 +291,7 @@
                     android:id="@+id/ivRock"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/rock1" />
+                    android:src="@drawable/rockhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -323,7 +323,7 @@
                     android:id="@+id/ivWater"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/waterlily" />
+                    android:src="@drawable/waterhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -355,7 +355,7 @@
                     android:id="@+id/ivAnnual"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/annual" />
+                    android:src="@drawable/annualhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -387,7 +387,7 @@
                     android:id="@+id/ivPerennials"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/perennials" />
+                    android:src="@drawable/perennialhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -419,7 +419,7 @@
                     android:id="@+id/ivButterfly"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/butterfly" />
+                    android:src="@drawable/butterflyhd" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -450,7 +450,7 @@
                     android:id="@+id/ivSucculents"
                     android:layout_width="wrap_content"
                     android:layout_height="85dp"
-                    android:src="@drawable/succulents" />
+                    android:src="@drawable/succulentshd" />
 
                 <TextView
                     android:layout_width="wrap_content"

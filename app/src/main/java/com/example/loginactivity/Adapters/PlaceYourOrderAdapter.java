@@ -1,6 +1,7 @@
 package com.example.loginactivity.Adapters;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,6 +20,11 @@ import java.util.List;
 public class PlaceYourOrderAdapter extends RecyclerView.Adapter<PlaceYourOrderAdapter.MyViewHolder> {
 
     private List<Menu> menuList;
+    private List<MenuItem> orderedMenus;
+
+    public List<MenuItem> getOrderedMenus() {
+        return orderedMenus;
+    }
 
     public PlaceYourOrderAdapter(List<Menu> menuList) {
         this.menuList = menuList;
@@ -28,6 +34,7 @@ public class PlaceYourOrderAdapter extends RecyclerView.Adapter<PlaceYourOrderAd
         this.menuList = menuList;
         notifyDataSetChanged();
     }
+
 
     @NonNull
     @Override
@@ -39,7 +46,7 @@ public class PlaceYourOrderAdapter extends RecyclerView.Adapter<PlaceYourOrderAd
     @Override
     public void onBindViewHolder(@NonNull PlaceYourOrderAdapter.MyViewHolder holder, int position) {
         holder.menuName.setText(menuList.get(position).getName());
-        holder.menuPrice.setText("Price: $"+String.format("%.2f", menuList.get(position).getPrice()*menuList.get(position).getTotalInCart()));
+        holder.menuPrice.setText("Price: Rs."+String.format("%.2f", menuList.get(position).getPrice()*menuList.get(position).getTotalInCart()));
         holder.menuQty.setText("Qty: " + menuList.get(position).getTotalInCart());
         Glide.with(holder.thumbImage)
                 .load(menuList.get(position).getUrl())

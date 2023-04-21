@@ -6,12 +6,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
+
 import android.os.Bundle;
-import android.provider.ContactsContract;
+
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -57,9 +56,9 @@ public class CommentsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments);
 
-        toolbar=findViewById(R.id.topAppbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Comments");
+//        toolbar=findViewById(R.id.topAppbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setTitle("Comments");
 
         Intent intent=getIntent();
         postid=intent.getStringExtra("postid");

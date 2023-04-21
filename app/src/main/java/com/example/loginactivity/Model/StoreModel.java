@@ -15,6 +15,8 @@ public class StoreModel implements Parcelable {
     private Hours hours;
     private List<Menu> menus;
 
+
+
     public String getName() {
         return name;
     }
